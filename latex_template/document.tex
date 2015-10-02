@@ -1,0 +1,73 @@
+\documentclass[letterpaper, 12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINITIONS
+% Change those informations
+\gdef\mytitle{Laborprotokoll}
+\gdef\mythema{CORBA Overview}
+
+\gdef\mysubject{Systemtechnik Labor}
+\gdef\mycourse{5BHITT 2015/16, GruppeA}
+\gdef\myauthor{Michael Borko}
+
+\gdef\myversion{0.2}
+\gdef\mybegin{\today}
+\gdef\myfinish{\today}
+
+\gdef\mygrade{Note:}
+\gdef\myteacher{Betreuer: Th.Micheler}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input special/preamble.tex
+
+\let\tempsection\section
+\renewcommand\section[1]{\vspace{-0.3cm}\tempsection{#1}\vspace{-0.3cm}}
+\WithSuffix\newcommand\section*[1]{\tempsection*{#1}}
+
+\let\tempsubsection\subsection
+\renewcommand\subsection[1]{\vspace{0cm}\tempsubsection{#1}\vspace{0cm}}
+
+\let\tempsubsubsection\subsubsection
+\renewcommand\subsubsection[1]{\vspace{0cm}\tempsubsubsection{#1}\vspace{0cm}}
+
+\linespread{0.94}
+
+\lhead{\mysubject}
+\chead{}
+\rhead{\bfseries\mythema}
+\lfoot{\mycourse}
+\cfoot{\thepage}
+\rfoot{\ccby \myauthor}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\parindent 0pt
+\parskip 6pt
+
+\pagenumbering{Roman} 
+\input{special/title}
+
+\clearpage
+\thispagestyle{empty}
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+\pagestyle{fancy}
+
+%\vspace{-0.5cm}
+
+\input sections/task.tex
+\input sections/solution.tex
+
+\clearpage
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+\listoftables
+\lstlistoflistings
+\listoffigures
+
+\end{document}

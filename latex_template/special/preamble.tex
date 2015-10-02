@@ -1,0 +1,105 @@
+%!TEX root=../document.tex
+
+\usepackage[in]{fullpage}
+% Fontencoding for possible copy&paste out of PDF
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx} 
+\usepackage{textcomp}
+\usepackage{sectsty}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{footmisc}
+\usepackage{fancyhdr}
+\usepackage{ccicons}
+\usepackage{suffix}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{url}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[longnamesfirst,nonamebreak]{natbib}
+\usepackage[headsep=1cm,headheight=3cm,hmargin=2cm,vmargin=2.5cm]{geometry}
+\usepackage[nolist]{acronym}
+
+% Definitions for Textcolor
+\usepackage{color}
+\definecolor{listings}{rgb}{0.96, 0.96, 0.96}
+\definecolor{update}{rgb}{1, 0.8, 0.8}
+\definecolor{config}{rgb}{0.8, 1, 0.8}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+% Java Syntaxhighligthning
+% strings
+\definecolor{javared}{rgb}{0.6,0,0}
+% comments
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35}
+% keywords
+\definecolor{javapurple}{rgb}{0.5,0,0.35}
+% javadoc
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75}
+
+\lstset{
+	basicstyle=\ttfamily\small,
+	keywordstyle=\bfseries\color[rgb]{0.496,0.000,0.332},
+	commentstyle=\color[rgb]{0.246,0.496,0.371},
+	stringstyle=\color[rgb]{0.164,0.000,0.996},
+	tabsize=4,
+	breaklines=true,
+	numbers=left,
+	numberstyle=\tiny\color{black},
+	stepnumber=5,
+	numbersep=10pt,
+	numberstyle=\tiny,
+	captionpos=b,
+	xleftmargin=1cm,
+	showspaces=false,
+	showstringspaces=false,
+	basewidth={0.53em,0.45em},
+	frame=single,
+	xleftmargin=1cm,
+	basicstyle=\scriptsize,
+}
+
+
+\lstdefinestyle{Java}{
+	language=Java,
+	keywordstyle=\color{javapurple}\bfseries,
+	stringstyle=\color{javared},
+	commentstyle=\color{javagreen},
+	morecomment=[s][\color{javadocblue}]{/**}{*/},
+}
+
+\lstdefinestyle{XML}{
+	language=XML,
+	basicstyle=\ttfamily,
+	columns=fullflexible,
+	commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+	morestring=[b]",
+	morestring=[s]{>}{<},
+	morecomment=[s]{<?}{?>},
+	stringstyle=\color{black},
+	identifierstyle=\color{darkblue},
+	keywordstyle=\color{cyan},
+	% list your attributes here
+	morekeywords={xmlns,version,type}
+}
+
+\usepackage[
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black,
+	linktoc=all
+]{hyperref}
