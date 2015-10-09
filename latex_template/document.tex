@@ -3,6 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DEFINITIONS
 % Change those informations
+% If you need umlauts you have to escape them, e.g. for an ü you have to write \"u
 \gdef\mytitle{Laborprotokoll}
 \gdef\mythema{CORBA Overview}
 
@@ -38,7 +39,9 @@
 \rhead{\bfseries\mythema}
 \lfoot{\mycourse}
 \cfoot{\thepage}
-\rfoot{\ccby \myauthor}
+% Creative Commons license BY
+% http://creativecommons.org/licenses/?lang=de
+\rfoot{\ccby\hspace{2mm}\myauthor}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
