@@ -1,0 +1,36 @@
+\cfoot{Dominik Scholz}
+
+\textit{RoboNav Overview} is used for visualizing the \textit{RoboNav} system. Although \textit{RoboNav} is modular as described in section \ref{subsec:domainmodel} and therefore the use of \textit{RoboNav Overview} is not mandatory, it is a basic implementation of the \textit{RoboNav \gls{API}} thus giving a visually appealing example of a range of functions the \gls{API} offers. \\
+
+\subsection{Design of RoboNav Overview}
+
+The graphical user interface framework chosen for \textit{RoboNav Overview} was JavaFX, the state-of-the-art framework for rich client applications in Java. Since Java 8 it is included in the Java SE Runtime Environment making it easy to reach a broad user base. JavaFX is designed to encourage the Model-View-Control pattern by providing a \gls{XML}-based way to describe the user interface additionally to the approach of building it with program code. These \gls{XML}-files, called \gls{FXML}, are style-able with a derived version of the \gls{CSS} standard. Some features the actual standard \gls{CSS} 3 offers are not possible. However the \gls{CSS} used in JavaFX supports additional features such as variables for colors. The control part of the previously mentioned \gls{MVC} pattern consists of controller classes specified in the \gls{FXML} files. These controller classes are automatically instantiated when the \gls{FXML} is parsed. With annotations it is possible to link objects to the corresponding \gls{XML} tags to modify them on runtime.
+
+\subsection{Startup Configuration of RoboNav Overview}
+\label{subsec:startupconfigurationofrobonavoverview}
+
+When starting \textit{RoboNav Overview} the connection setup screen appears, shown in Figure \ref{fig:connectionsetup}. In this dialogue the user can either connect to an already running instance of \textit{RoboNav Control} by providing the \gls{IP} and the port of the computer running the control software, or starting an own instance on the local system. As explained in section \ref{sec:rncp} an incoming port must be specified which tells the \textit{RoboNav Control} where to send the \textit{\gls{RNCP}} packets and \textit{RoboNav Overview} where to receive them.
+
+\insertpicture{images/connectionsetup.png}{Connection Setup}{(selfmade)}{fig:connectionsetup}{0.4}
+
+After that it is possible to proceed directly to the main window or setup the \textit{RoboNav Configuration} for configuring \textit{RoboNav Control}. The latter choice leads to the configuration setup. In this setup all entries of the \textit{RoboNav Configuration} can be easily customized. These include the connection information for the external camera, the dimensions of the map, the clipping values for the camera image and flags for image modification. The border clipping of the camera image can be adjusted intuitively by dragging the blue borders of the viewport directly on the shown image (Figure \ref{fig:configurationsetup}). When proceeding to the main screen the configuration is automatically sent to the connected \textit{RoboNav Control} instance. It is also possible to save and load configurations to generate \textit{RoboNav Configurations} for \textit{RoboNav Control}-only \textit{RoboNav} systems.
+
+\insertpicture{images/configurationsetup.png}{Configuration Setup}{(selfmade)}{fig:configurationsetup}{0.7}
+
+\subsection{Main Window of RoboNav Overview}
+
+In the main window of \textit{RoboNav Overview} (Figure \ref{fig:mainwindow}), the center is used to display the area map. In the background the overhead camera image is displayed. All connected robots are drawn according to their position. The green circle displays the position where the overhead camera detects the robot. This position is also used for the path calculation. In contrast the red circle shows the position the robot is located according to its internal odometry. The distance of which \textit{RoboNav} improves the position is shown as an orange line with the difference on both axis.
+The obstacles are shown in red with the opacity indicating its priority. A higher priority leads to a higher opacity and vice versa.
+
+If the user selects a robot by clicking on it the robot's data is displayed in the right panel. On default this panel shows the robot with the highest priority. In the robot panel the user can see the robot's exact position including its rotation, all sensor values regardless if they are digital or analog and the current battery state. Furthermore the robot's priority can be changed. For convenience the robot can also be navigated manually. If the robot uses an onboard-camera, the image is received by \textit{RoboNav Overview} and displayed at the top of the robot panel.
+
+\insertpicture{images/mainwindow.png}{Main Window}{(selfmade)}{fig:mainwindow}{1}
+
+On the left side of the window, the tool-bar is located. There the tools can be switched. By default the selection tool, which is used to select robots and paths is used. The other tool available is the obstacle tool. With this tool it is possible to create new obstacles manually and send them to \textit{RoboNav Control} so they can be used for avoidance.
+
+The user can create a new path for the selected robot by clicking on the map with the selection tool (Figure \ref{fig:pathselection}) Simultaneously the bottom panel, called path panel, is opened where every point clicked by the user is added to a chronological list. Additionally the user can choose one of the provided algorithms from \textit{RoboNav Control} to travel this path. When the user sends a path-request to \textit{RoboNav Control}, the calculated path is returned to \textit{RoboNav Overview} and automatically displayed on the area map.
+
+\insertpicture{images/createpath.png}{Selecting a path in \textit{RoboNav Overview}}{(selfmade)}{fig:pathselection}{1}
+
+The menu bar provides direct links to the documentation as well as this diploma thesis. Additionally the setup windows mentioned in section \ref{subsec:startupconfigurationofrobonavoverview} can be reopened from the menu.
+
