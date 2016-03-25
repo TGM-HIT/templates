@@ -6,6 +6,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{graphicx} 
+\usepackage{wasysym}
 \usepackage{textcomp}
 \usepackage{sectsty}
 \usepackage{caption}
@@ -19,6 +20,7 @@
 \usepackage{multirow}
 \usepackage{tabularx}
 \usepackage{listings}
+\usepackage{accsupp}
 \usepackage{color}
 \usepackage{url}
 \usepackage[dvipsnames]{xcolor}
@@ -76,13 +78,6 @@
 	morecomment=[s][\color{javadocblue}]{/**}{*/},
 }
 
-\lstdefinestyle{XML}{
-	language=XML,
-	basicstyle=\ttfamily,
-	columns=fullflexible,
-	commentstyle=\color{gray}\upshape
-}
-
 \lstdefinelanguage{XML}
 {
 	morestring=[b]",
@@ -93,6 +88,33 @@
 	keywordstyle=\color{cyan},
 	% list your attributes here
 	morekeywords={xmlns,version,type}
+}
+
+\lstdefinestyle{XML}{
+	language=XML,
+	basicstyle=\ttfamily\small,
+	columns=fullflexible,
+	commentstyle=\color{gray}\upshape
+}
+
+\newcommand{\noncopynumber}[1]{
+	\BeginAccSupp{method=escape,ActualText={}}
+	#1
+	\EndAccSupp{}
+}
+\lstdefinestyle{bash}{
+	language=bash,
+	basicstyle=\ttfamily\small,
+	literate={-}{{-}}{1},
+	% http://tex.stackexchange.com/questions/145416/how-to-have-straight-single-quotes-in-lstlistings
+	upquote=true;
+	showstringspaces=false,
+	%numbers=none,
+	% http://tex.stackexchange.com/questions/122256/only-select-code-without-line-numbers
+	numberstyle=\tiny\noncopynumber,
+	breaklines=false,
+	columns=fullflexible,
+	basicstyle=\scriptsize
 }
 
 % http://tex.stackexchange.com/questions/83085/how-to-improve-listings-display-of-json-files
@@ -125,9 +147,8 @@
 	{\}}{{{\color{delim}{\}}}}}{1}
 	{[}{{{\color{delim}{[}}}}{1}
 	{]}{{{\color{delim}{]}}}}{1},
-	basicstyle=\scriptsize,
+	basicstyle=\scriptsize
 }
-
 
 \usepackage[
 	colorlinks,
