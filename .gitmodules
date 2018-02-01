@@ -1,0 +1,3 @@
+[submodule "latex_template"]
+	path = latex_template
+	url = https://github.com/TGM-HIT/latex_template
