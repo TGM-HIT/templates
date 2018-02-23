@@ -1,6 +1,8 @@
 [submodule "latex-protocol"]
 	path = latex-protocol
 	url = git@github.com:TGM-HIT/latex-protocol.git
+	branch = master
 [submodule "diploma-thesis"]
 	path = diploma-thesis
 	url = git@github.com:TGM-HIT/diploma-thesis.git
+	branch = master
