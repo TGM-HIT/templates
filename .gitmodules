@@ -6,3 +6,6 @@
 	path = diploma-thesis
 	url = git@github.com:TGM-HIT/diploma-thesis.git
 	branch = master
+[submodule "latex-projects"]
+	path = latex-projects
+	url = git@github.com:TGM-HIT/latex-projects.git
