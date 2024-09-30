@@ -9,3 +9,7 @@
 [submodule "latex-projects"]
 	path = latex-projects
 	url = git@github.com:TGM-HIT/latex-projects.git
+[submodule "typst-diploma-thesis"]
+	path = typst-diploma-thesis
+	url = git@github.com:TGM-HIT/typst-diploma-thesis.git
+	branch = main
