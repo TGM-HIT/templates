@@ -13,3 +13,6 @@
 	path = typst-diploma-thesis
 	url = git@github.com:TGM-HIT/typst-diploma-thesis.git
 	branch = main
+[submodule "typst-protocol"]
+	path = typst-protocol
+	url = git@github.com:TGM-HIT/typst-protocol.git

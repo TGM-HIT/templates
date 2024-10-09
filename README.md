@@ -2,15 +2,23 @@
 Hier können die aktuell gültigen Vorlagen für die Protokolle und Diplomarbeiten der Abteilung HIT abgerufen werden.
 
 ## Protokollvorlagen
-Genauere Informationen zur Installation, Konfiguration und Kompilierung der Protokollvorlage finden sich im zugehörigen Repository unter https://github.com/TGM-HIT/latex-protocol.
+Genauere Informationen zur Installation, Konfiguration und Kompilierung der Protokollvorlage finden sich im zugehörigen Repository unter https://github.com/TGM-HIT/latex-protocol (LaTeX-Version) bzw. https://github.com/TGM-HIT/typst-protocol (Typst-Version).
 
-### Installation
+### Installation (LaTeX)
 Im Ordner, welcher das Protokoll beinhalten soll kann die Vorlage über Git heruntergeladen werden:
 ``` sh
 git clone https://github.com/tgm-hit/latex-protocol.git
 ```
 
 Es ist auch möglich mit bekannten Editoren in den entsprechenden Betriebssystemen mit der Vorlage zu arbeiten.
+
+### Installation (Typst)
+Die Vorlage der Diplomarbeit kann über `typst init` auf ein neues Projekt angewendet werden:
+``` sh
+typst init @preview/tgm-hit-protocol
+```
+
+In der Webapp kann die Vorlage über folgenden Link verwendet werden: https://typst.app/?template=tgm-hit-protocol&version=latest
 
 ## Diplomarbeitsvorlage
 Genauere Informationen zur Installation, Konfiguration und Kompilierung der Diplomarbeitsvorlage finden sich im zugehörigen Repository unter https://github.com/TGM-HIT/diploma-thesis (LaTeX-Version) bzw. https://github.com/TGM-HIT/typst-diploma-thesis (Typst-Version).
