@@ -18,7 +18,7 @@ Die Vorlage der Diplomarbeit kann über `typst init` auf ein neues Projekt angew
 typst init @preview/tgm-hit-protocol
 ```
 
-In der Webapp kann die Vorlage über folgenden Link verwendet werden: https://typst.app/?template=tgm-hit-protocol&version=latest
+In der Webapp kann die Vorlage z.B. über den "Create new project in app" Button auf der [Universe page](https://typst.app/universe/package/tgm-hit-protocol) der Vorlage verwendet werden.
 
 ## Diplomarbeitsvorlage
 Genauere Informationen zur Installation, Konfiguration und Kompilierung der Diplomarbeitsvorlage finden sich im zugehörigen Repository unter https://github.com/TGM-HIT/diploma-thesis (LaTeX-Version) bzw. https://github.com/TGM-HIT/typst-diploma-thesis (Typst-Version).
@@ -35,7 +35,7 @@ Die Vorlage der Diplomarbeit kann über `typst init` auf ein neues Projekt angew
 typst init @preview/tgm-hit-thesis
 ```
 
-In der Webapp kann die Vorlage über folgenden Link verwendet werden: https://typst.app/?template=tgm-hit-thesis&version=latest
+In der Webapp kann die Vorlage z.B. über den "Create new project in app" Button auf der [Universe page](https://typst.app/universe/package/tgm-hit-thesis) der Vorlage verwendet werden.
 
 ## LaTeX-Build
 Am einfachsten kann das Dokument über den `make` Befehl erstellt werden, wenn dieses am System vorhanden ist.
@@ -73,5 +73,4 @@ typst watch main.typ
 ```
 
 ### Editor-Plugins
-Für die Integration in verschiedene Editoren wird aktuell (September 2024) _tinymist_ empfohlen. _tinymist_ stellt Kompilierung, syntax highlighting, Autovervollständigung, live preview, etc. zur Verfügung. Es gibt [Installationsanleitungen]((https://github.com/Myriad-Dreamin/tinymist/?tab=readme-ov-file#installation)) für einige gängige Editoren.
-
+Für die Integration in verschiedene Editoren wird aktuell (September 2024) _tinymist_ empfohlen. _tinymist_ stellt Kompilierung, syntax highlighting, Autovervollständigung, live preview, etc. zur Verfügung. Es gibt [Installationsanleitungen](https://github.com/Myriad-Dreamin/tinymist/?tab=readme-ov-file#installation) für einige gängige Editoren.
